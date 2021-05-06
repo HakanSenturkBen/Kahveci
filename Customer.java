@@ -1,22 +1,29 @@
 import java.sql.Date;
+import java.util.Calendar;
 
 public class Customer implements Entity {
 	private int id;
 	private String firstName;
 	private String lastName;
-	private Date dateOfBirth;
+	private String bornedYear;
 	private String NationalityId;
 	
 	public Customer() {
 	}
-	public Customer(int id, String firstName, String lastName, Date dateOfBirth, String nationalityId) {
+	public Customer(int id, String firstName, String lastName, String bornedYear, String nationalityId) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.dateOfBirth = dateOfBirth;
+		this.bornedYear = bornedYear;
 		NationalityId = nationalityId;
 	}
 	
+	public String getBornedYear() {
+		return bornedYear;
+	}
+	public void setBornedYear(String bornedYear) {
+		this.bornedYear = bornedYear;
+	}
 	public int getId() {
 		return id;
 	}
@@ -35,12 +42,7 @@ public class Customer implements Entity {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public Date getDateOfBirth() {
-		return dateOfBirth;
-	}
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
+	
 	public String getNationalityId() {
 		return NationalityId;
 	}
